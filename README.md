@@ -13,11 +13,13 @@ In order to run the app, you will need to clone this repository and install all 
 3. [Git & Git Bash](https://git-scm.com/downloads)<br/>
 
 # NPM Modules Used
-1. create-react-app
+1. react
+2. react-dom
+3. react-scripts
 # Installation Steps
 1. Open Bash and Clone the Spidey-Click repo
 2. Install all required technologies
-3. In Bash, change the current directory to the spidey-click directory and install create-react-app module using the following command:
+3. [Optional] In Bash, change the current directory to the spidey-click directory and install create-react-app module using the following command:
     1. npm install -g create-react-app
 4. Next install all modules from the package.json, using the following command:
     1. yarn init [Enter]  
