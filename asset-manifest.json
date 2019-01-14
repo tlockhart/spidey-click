@@ -1,7 +1,7 @@
 {
   "main.css": "/spidey-click/static/css/main.f54c5ebf.chunk.css",
-  "main.js": "/spidey-click/static/js/main.cc7a7efa.chunk.js",
-  "main.js.map": "/spidey-click/static/js/main.cc7a7efa.chunk.js.map",
+  "main.js": "/spidey-click/static/js/main.a3536d69.chunk.js",
+  "main.js.map": "/spidey-click/static/js/main.a3536d69.chunk.js.map",
   "static/js/1.4a4cf235.chunk.js": "/spidey-click/static/js/1.4a4cf235.chunk.js",
   "static/js/1.4a4cf235.chunk.js.map": "/spidey-click/static/js/1.4a4cf235.chunk.js.map",
   "runtime~main.js": "/spidey-click/static/js/runtime~main.c92fe305.js",
@@ -9,6 +9,6 @@
   "static/media/style.css": "/spidey-click/static/media/SF Comic Script Condensed.fa581c0d.ttf",
   "static/css/main.f54c5ebf.chunk.css.map": "/spidey-click/static/css/main.f54c5ebf.chunk.css.map",
   "index.html": "/spidey-click/index.html",
-  "precache-manifest.c1c6a5ab07886eca3729c886391b3808.js": "/spidey-click/precache-manifest.c1c6a5ab07886eca3729c886391b3808.js",
+  "precache-manifest.4904f647fb88aff178517f0d3d2f1603.js": "/spidey-click/precache-manifest.4904f647fb88aff178517f0d3d2f1603.js",
   "service-worker.js": "/spidey-click/service-worker.js"
 }

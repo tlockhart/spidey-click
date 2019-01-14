@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/spidey-click/precache-manifest.c1c6a5ab07886eca3729c886391b3808.js"
+  "/spidey-click/precache-manifest.4904f647fb88aff178517f0d3d2f1603.js"
 );
 
 workbox.clientsClaim();
