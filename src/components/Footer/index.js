@@ -9,8 +9,8 @@ function Footer(props){
                 {/* <span className="text-muted">Place sticky footer content here.</span> */}
                 {/* <span className="text-muted mx-auto"> */}
                 <ul>
-                    <li><img alt="react" className="logo" src={logo}/>Clicky Game </li>
-                    <li>© 2018 Tony Lockhart</li>
+                    <li><img alt="react" className="logo" src={logo}/><p className="score">Spidey Click</p></li>
+                    <li><span>©<p className="instructions"> 2018 Tony Lockhart</p></span></li>
                 </ul>
                 {/* </span> */}
             </div>
