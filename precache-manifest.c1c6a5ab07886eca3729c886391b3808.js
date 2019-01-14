@@ -12,23 +12,27 @@ self.__precacheManifest = [
     "url": "/spidey-click/static/media/KGHAPPYSolid.f8507263.ttf"
   },
   {
+    "revision": "1022167666c3db6ae93e86cc1514e17d",
+    "url": "/spidey-click/static/media/ASMmasthead_kid5.10221676.png"
+  },
+  {
     "revision": "c92fe3054b69933cd7c9",
     "url": "/spidey-click/static/js/runtime~main.c92fe305.js"
   },
   {
-    "revision": "4738fa630a1b6e01774b",
-    "url": "/spidey-click/static/js/main.4738fa63.chunk.js"
+    "revision": "cc7a7efa2143a9028608",
+    "url": "/spidey-click/static/js/main.cc7a7efa.chunk.js"
   },
   {
     "revision": "4a4cf2359ecd8a3b1537",
     "url": "/spidey-click/static/js/1.4a4cf235.chunk.js"
   },
   {
-    "revision": "4738fa630a1b6e01774b",
-    "url": "/spidey-click/static/css/main.0ec2782b.chunk.css"
+    "revision": "cc7a7efa2143a9028608",
+    "url": "/spidey-click/static/css/main.f54c5ebf.chunk.css"
   },
   {
-    "revision": "7a4fcb9916ed74307c5f3850207a6647",
+    "revision": "ec8e87bf0b23844621db1af03b636665",
     "url": "/spidey-click/index.html"
   }
 ];
