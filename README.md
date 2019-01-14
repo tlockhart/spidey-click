@@ -1,10 +1,10 @@
 <h1 align="center">Spidey-Click</h1>
 <p align="center"><kbd><img src ="public/assets/images/spidey-click.png"/></kbd></p><br/>
 
-This project is a simple memory game, build with React.  The game is played by clicking an image of a Spidey character from the Spider-Man series.  The player earns points by clicking an image only once.  If a character is clicked more than once, the game starts over, but the highest score is displayed on the screen.
+This project is a simple memory game.  Players earn points by clicking an image of a Spidey character from the Spider-Man series.  The game ends when a player clicks a character more than once. The highest score is displayed on the screen after each round.
 
 # Demo
-*<br/>
+*https://tlockhart.github.io/spidey-click/<br/>
 # Setup
 In order to run the app, you will need to clone this repository and install all required technologies listed below.
 # Required Technologies
