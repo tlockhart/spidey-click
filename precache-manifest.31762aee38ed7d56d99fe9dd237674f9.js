@@ -1,5 +1,9 @@
 self.__precacheManifest = [
   {
+    "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
+    "url": "/spidey-click/static/media/logo.5d5d9eef.svg"
+  },
+  {
     "revision": "6bffb4a5e21eff023457e58d7c79975c",
     "url": "/spidey-click/static/media/TheAmazingSpider-Man.6bffb4a5.ttf"
   },
@@ -20,19 +24,19 @@ self.__precacheManifest = [
     "url": "/spidey-click/static/js/runtime~main.c92fe305.js"
   },
   {
-    "revision": "a3536d69ccc6dfc4d398",
-    "url": "/spidey-click/static/js/main.a3536d69.chunk.js"
+    "revision": "3b25513e1f3539095b6e",
+    "url": "/spidey-click/static/js/main.3b25513e.chunk.js"
   },
   {
-    "revision": "4a4cf2359ecd8a3b1537",
-    "url": "/spidey-click/static/js/1.4a4cf235.chunk.js"
+    "revision": "3b2b09a9a77487f81510",
+    "url": "/spidey-click/static/js/1.3b2b09a9.chunk.js"
   },
   {
-    "revision": "a3536d69ccc6dfc4d398",
-    "url": "/spidey-click/static/css/main.f54c5ebf.chunk.css"
+    "revision": "3b25513e1f3539095b6e",
+    "url": "/spidey-click/static/css/main.8ce67da3.chunk.css"
   },
   {
-    "revision": "1fca2868422f010cad35cad23d179f09",
+    "revision": "3c78eb99c491c86e8835cf63905dc5df",
     "url": "/spidey-click/index.html"
   }
 ];

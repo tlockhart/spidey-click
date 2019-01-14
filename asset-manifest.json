@@ -1,14 +1,15 @@
 {
-  "main.css": "/spidey-click/static/css/main.f54c5ebf.chunk.css",
-  "main.js": "/spidey-click/static/js/main.a3536d69.chunk.js",
-  "main.js.map": "/spidey-click/static/js/main.a3536d69.chunk.js.map",
-  "static/js/1.4a4cf235.chunk.js": "/spidey-click/static/js/1.4a4cf235.chunk.js",
-  "static/js/1.4a4cf235.chunk.js.map": "/spidey-click/static/js/1.4a4cf235.chunk.js.map",
+  "main.css": "/spidey-click/static/css/main.8ce67da3.chunk.css",
+  "main.js": "/spidey-click/static/js/main.3b25513e.chunk.js",
+  "main.js.map": "/spidey-click/static/js/main.3b25513e.chunk.js.map",
+  "static/js/1.3b2b09a9.chunk.js": "/spidey-click/static/js/1.3b2b09a9.chunk.js",
+  "static/js/1.3b2b09a9.chunk.js.map": "/spidey-click/static/js/1.3b2b09a9.chunk.js.map",
   "runtime~main.js": "/spidey-click/static/js/runtime~main.c92fe305.js",
   "runtime~main.js.map": "/spidey-click/static/js/runtime~main.c92fe305.js.map",
+  "static/media/logo.svg": "/spidey-click/static/media/logo.5d5d9eef.svg",
   "static/media/style.css": "/spidey-click/static/media/SF Comic Script Condensed.fa581c0d.ttf",
-  "static/css/main.f54c5ebf.chunk.css.map": "/spidey-click/static/css/main.f54c5ebf.chunk.css.map",
+  "static/css/main.8ce67da3.chunk.css.map": "/spidey-click/static/css/main.8ce67da3.chunk.css.map",
   "index.html": "/spidey-click/index.html",
-  "precache-manifest.4904f647fb88aff178517f0d3d2f1603.js": "/spidey-click/precache-manifest.4904f647fb88aff178517f0d3d2f1603.js",
+  "precache-manifest.31762aee38ed7d56d99fe9dd237674f9.js": "/spidey-click/precache-manifest.31762aee38ed7d56d99fe9dd237674f9.js",
   "service-worker.js": "/spidey-click/service-worker.js"
 }
