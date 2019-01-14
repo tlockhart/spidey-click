@@ -64,7 +64,8 @@
 }
 .header {
     background-color: #2c323c;
-    background-image: url(/assets/images/ASMmasthead_kid5.png);
+    /*background-image: url(/assets/images/ASMmasthead_kid5.png);*/
+    background-image: url(./images/ASMmasthead_kid5.png);
     background-repeat: repeat;
     color: #fff;
     min-height: 350px;
