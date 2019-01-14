@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/spidey-click/static/js/runtime~main.c92fe305.js"
   },
   {
-    "revision": "3b25513e1f3539095b6e",
-    "url": "/spidey-click/static/js/main.3b25513e.chunk.js"
+    "revision": "cc10d71a1fb4a5681dbd",
+    "url": "/spidey-click/static/js/main.cc10d71a.chunk.js"
   },
   {
     "revision": "3b2b09a9a77487f81510",
     "url": "/spidey-click/static/js/1.3b2b09a9.chunk.js"
   },
   {
-    "revision": "3b25513e1f3539095b6e",
-    "url": "/spidey-click/static/css/main.8ce67da3.chunk.css"
+    "revision": "cc10d71a1fb4a5681dbd",
+    "url": "/spidey-click/static/css/main.dec1ba8e.chunk.css"
   },
   {
-    "revision": "3c78eb99c491c86e8835cf63905dc5df",
+    "revision": "cc0e73a0cdac3a734f8b695fcfebe613",
     "url": "/spidey-click/index.html"
   }
 ];
