@@ -1,6 +1,6 @@
 import React from 'react';
 import "./style.css";
-//import logo from './logo.svg';
+import logo from './images/logo.svg';
 
 function Footer(props){
     return (
@@ -9,7 +9,7 @@ function Footer(props){
                 {/* <span className="text-muted">Place sticky footer content here.</span> */}
                 {/* <span className="text-muted mx-auto"> */}
                 <ul>
-                    <li><img alt="react" src="/assets/images/logo.png"/>Clicky Game </li>
+                    <li><img alt="react" className="logo" src={logo}/>Clicky Game </li>
                     <li>© 2018 Tony Lockhart</li>
                 </ul>
                 {/* </span> */}
