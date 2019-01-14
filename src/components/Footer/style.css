@@ -1,0 +1,82 @@
+/*main.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+  }*/
+  
+  /*.footer {
+    background-color: #f5f5f5;
+    background: #5133a4;
+
+  }*/
+  /****************************************************
+  ** Sticky footer 4 of 4: Set footer position & height
+  *****************************************************/
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+    
+    /**************/
+    /*Not Sticky Footer*/
+    justify-content: space-between;
+    background-color: #3A55A4;
+    /* padding: .5rem 1rem */
+  }
+  /*****************************************************/
+  
+  
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. */
+  
+  .footer-container {
+    width: auto;
+    max-width: 680px;
+    /* padding: 0 15px; */
+    /* font-size: calc(10px + 14 * (100vw - 320px)/ 800); */
+    /* z-index: 99;
+    white-space: nowrap; */
+  }
+  
+
+ footer .footer-container ul li img{ 
+  width: 30px;
+  position: relative;
+  /* top: 3px;
+  left: 2px; */
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+.footer li{
+    display: inline-block;
+    /*padding: 25px 25px;*/
+    /*padding: 0 25px;*/
+    /*padding-left: 10px;*/
+    
+    width: 50%;
+    color: white;
+} 
+
+@media (max-width: 700px) {
+  .footer {
+    height: 120px;
+  }
+    .footer ul{
+        margin:0 auto;
+        padding-top: 5%;
+    }
+    .footer li {
+        display: block;
+        text-align: center;
+        width: 100%;
+        /* padding-top: 10px; */
+        line-height: 1.5;
+    } 
+}

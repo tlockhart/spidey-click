@@ -1,0 +1,97 @@
+*{
+    box-sizing:border-box;
+}
+
+@font-face {
+    font-family: kg-happy;
+    src: url(./fonts/kg_happy/KGHAPPYSolid.ttf);
+}
+
+@font-face {
+    font-family: sf-comic;
+    src: url(./fonts/sf_comic_script/SF\ Comic\ Script\ Condensed.ttf);
+}
+
+@font-face {
+    font-family: sp-man;
+    src: url(./fonts/the_amazing_spider_man/TheAmazingSpider-Man.ttf);
+}
+
+.instructions{
+    font-family: kg-happy;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.score{
+    font-family: sf-comic;
+    display: inline;
+}
+
+.icon{
+    font-family: sp-man;
+    color: #000000;
+    margin-bottom: 0px;
+}
+.navbar {
+    background-color: #3A55A4;
+    min-height: 70px;
+    position: fixed;
+    width: 100%;
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    color: #fff;
+    font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+    z-index: 99;
+    white-space: nowrap;
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
+.navbar li{
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+.navbar li h1, p{
+    margin-bottom: 0px;
+}
+.header {
+    background-color: #2c323c;
+    background-image: url(/assets/images/ASMmasthead_kid5.png);
+    background-repeat: repeat;
+    color: #fff;
+    min-height: 350px;
+    min-width: 100%!important;
+    background-size:100% 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/********************************************
+ *NOTE: Push the SpiderMan Header down 20px,  
+ *so it can be viewed underthe Navbar 
+ ********************************************/
+body { padding-top: 20px !important;}
+
+@media (max-width: 700px) {
+/*********************************************************************
+ *NOTE: When the NavBar Collapses, Push the SpiderMan Header down 
+ *60pxs so it can be viewed under the Navbar
+**********************************************************************/
+    body { padding-top: 75px !important; }
+    .header {
+        min-height:100px;
+        min-width:100%!important;
+    }
+    .navbar li {
+        display: block;
+        width: 100%;
+        padding-top: 0;
+    } 
+}

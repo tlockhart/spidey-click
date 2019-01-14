@@ -12,3 +12,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/**********************New Code**********************/
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  }
+  html, body, #root {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  /*************************************************************************
+  **NOTE: USE THE STICKY FOOTER INSTRUCTIONS WITH THE FOLLOWING  STRUCTURE
+  **<Wrapper>
+  ***NAVBAR
+  ***HEADER 
+  ***FOOTER
+  **</WRAPPER>
+  **************************************************************************
+  *Sticky Footer 1 of 4: Set Containers Height and Spacing 
+  *(Only HTML or Body required) 
+  **************************************************************************/
+  html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+  }
+  /*************************************************/
+  body {
+    /*STICKY NAVBAR*/
+    padding-top: 4.5rem;
+    padding-bottom: 60px; /* Margin bottom by footer height */
+  }
+
+

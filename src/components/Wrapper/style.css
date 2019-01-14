@@ -1,0 +1,40 @@
+.wrapper {
+  /*Push the Header down*/
+  padding-top: 50px;
+  background: #ECEFF1;
+  width: 100%;
+  /*CANNOT HAVE A HEIGHT, MUST BE IN THE FLOW*/
+  /* height: 100%; */
+  display: flex;
+  flex-flow: row wrap;
+  /*padding: 20px;*/
+  justify-content: space-around;
+  align-content: flex-start;
+  margin: 0;
+  /* padding: auto; */
+  /* overflow-x: auto; */
+  /*overflow: hidden;*/
+
+  /**************************************************
+   *STICKY FOOTER: 2 of 4: Set the relative positon and 
+   *Push Down value of the Wrapper Container.  Push the 
+   *Footer down by its height 70px and add 16px for image 
+   *padding
+   *****************************************************/
+   padding-bottom: 76px;
+   /* padding-bottom: 136px; */
+   position:relative;
+   min-height:100vh;
+}
+@media (max-width: 574px){
+  /******************************************************
+   *STICKY FOOTER 3 of 4: Always push the footer down on 
+   *small screens. Push the Footer down by double its height 70px 
+   and add 16px for image space
+   ******************************************************/
+   .wrapper {
+   padding-bottom: 136px;
+   /* padding-bottom: 276px; */
+   }
+ }
+
