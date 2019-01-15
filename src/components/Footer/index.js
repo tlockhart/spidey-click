@@ -10,7 +10,7 @@ function Footer(props){
                 {/* <span className="text-muted mx-auto"> */}
                 <ul>
                     <li><img alt="react" className="logo" src={logo}/><p className="score">Spidey Click</p></li>
-                    <li><span>©<p className="instructions"> 2018 Tony Lockhart</p></span></li>
+                    <li><span>©<p className="instructions"> 2019 Tony Lockhart</p></span></li>
                 </ul>
                 {/* </span> */}
             </div>
