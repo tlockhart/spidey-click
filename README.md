@@ -1,7 +1,7 @@
 <h1 align="center">Spidey-Click</h1>
 <p align="center"><kbd><img src ="public/assets/images/spidey-click.png"/></kbd></p><br/>
 
-This project is a simple memory game.  Players earn points by clicking an image of a Spidey character from the Spider-Man series.  The game ends when a player clicks a character more than once. The highest score is displayed on the screen after each round.
+This project is a simple memory game.  Players earn points by clicking an image of a Spidey character from the Spider-Man series.  The player looses if they click a character more than once. The player wins if they click all 12 characters only once.  The highest score is displayed on the screen after each round.
 
 # Demo
 *https://tlockhart.github.io/spidey-click/<br/>

@@ -21,25 +21,25 @@ class App extends Component {
     isGameLost: false
   };
 
-  // function gets called when the page loads
+  // function gets called when the page loads and data is set to not clicked
   componentDidMount() {
     // reorders the dataarray on state changes
     this.setState({ friends: this.setFriends(this.state.friends) });
   }
 
-  //Add the status of the clicked object to the JSON when the page loads
+  //Add the new element CLICKED to the JSON file and set to false when the page loads
   setFriends = (data) => {
     const dataWithClick = data.map(item => ({ ...item, clicked: false }));
     return dataWithClick;
   };
 
-  //Reset clicked element back to false in JSON when user looses
+  //Reset clicked element back to false in JSON when user looses or wins
   resetFriends = (data) => {
     const resetClickedData = data.map(item => (item.clicked = false));
     return resetClickedData;
   };
 
-  updateFriendClick = (data, id) => {
+  updateFriendClick = (data, id, elemClass) => {
     //Has an item been clicked once:
     let imgClickedOnce = false;
     let updatedData = data.map(item => {
@@ -73,7 +73,7 @@ class App extends Component {
       //Don't Wobble Cards
       this.setState({ isGameLost: false });
       //shuffle the data
-      this.shuffleFriends(updatedData);
+      this.shuffleFriends(updatedData, elemClass, this.handleMouseLeave);
     }
     //Reset the clicked element in every element of the friends data
     else if (!imgClickedOnce) {
@@ -81,14 +81,17 @@ class App extends Component {
       this.setState({ isGameLost: true });
       //console.log("UPDATEFRIENDCLICK: ALL VALUES ARE BEING RESET")
       this.setState({ friends: this.resetFriends(updatedData) });
+
+      //Remove styling on Mobile Devices
+      this.handleMouseLeave(elemClass)
     }
     return updatedData;
   };//updateFrienClick
 
   //Update the friends data based on wins or loses
-  handleClicked = (id) => {
+  handleClicked = (id, elemClass) => {
     //console.log("ID = " + id);
-    let newData = this.updateFriendClick(this.state.friends, id);
+    let newData = this.updateFriendClick(this.state.friends, id, elemClass);
     //console.log("NewData = "+JSON.stringify(newData));
     this.setState({ friends: newData });
     //console.log("HandleClicked: NEW OBJECT = "+ JSON.stringify(this.state.friends));
@@ -97,20 +100,39 @@ class App extends Component {
   incrementScore = () => {
     // We always use the setState method to update a component's state
     let newScore = this.state.score + 1;
-    //console.log("NEW SCORE = " + newScore);
-    //this.setState({ score: `${newScore}`});
 
-    /* this.setState(prevState =>{
-       //Note YOU MUST RETURN THE NUMBER
-       return {score: prevState.score + 1};
-     })*/
-    this.setState({
+     //The Score is one point off
+     if(newScore === this.state.friends.length){
+      document.getElementById('msg').innerHTML = 'You Won!';
+      
+      //set score
+      this.setState({
+        score: newScore
+      });
+      
+      //Set Top Score
+      this.setState({
+        topScore: this.state.score+1
+      });
+      
+      //Reset score
+      this.setState({
+        score: 0
+      });
+
+      //Reset JSON DATA TO NOT CLICKED
+      this.setState({ friends: this.resetFriends(this.state.friends) });
+      //console.log("Score = "+this.state.score, "DATA = "+JSON.stringify(this.state.friends));
+     }
+    else
+      this.setState({
       score: newScore
     });
     //console.log("SCORE IS = " + this.state.score);
     //return newScore;
   };
-  //Calculate the best score and resets score on loss
+
+  //Calculate the best score and resets current score on loss
   resetScore = () => {
     let newScore = 0;
     this.highScoreArr.push(this.state.score);
@@ -121,16 +143,42 @@ class App extends Component {
     /*console.log("ResetScore: High Score Array = " + this.highScoreArr + " Length of Array = " + this.highScoreArr.length);
     console.log("ResetScore: Best Score = " + bestScore);*/
     this.setState({ topScore: bestScore });
+
     /*console.log("ResetScore: Top Score = " + this.state.topScore);*/
     this.setState({ score: newScore });
+
+    document.getElementById('msg').innerHTML = 'You Lose!';
+
+    //Reset JSON DATA TO NOT CLICKED
+    this.setState({ friends: this.resetFriends(this.state.friends) });
   };
 
   //Fisher-Yates Shuffle ALgorithm(NOTE: Manipulate the cloned JSON data before storing in state)
-  shuffleFriends = (data) => {
+  shuffleFriends = (data, elemClass, handleMouseLeave) => {
     for (let i = data.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [data[i], data[j]] = [data[j], data[i]];
+
+      //RESET SIZE FOR MOBILE DEVICES
+      if(i === data.length-1)
+      {
+        //Reset size after shuffle on mobile devices:
+        handleMouseLeave(elemClass);
+      }
     }
+  };
+
+   //Mouse Enter
+   handleMouseEnter = (name) => {
+    let imgContainer = document.getElementsByClassName(name)[0];
+    imgContainer.style.transform = 'scale(1.2)';
+    imgContainer.style.border = '1px solid black';
+  };
+
+  handleMouseLeave = (name) => {
+    let imgContainer = document.getElementsByClassName(name)[0];
+    imgContainer.style.transform = 'scale(1)';
+    imgContainer.style.border = 'none';
   };
 
   render() {
@@ -150,6 +198,8 @@ class App extends Component {
                   incrementScore={this.incrementScore}
                   resetScore={this.resetScore}
                   handleClicked={this.handleClicked}
+                  handleMouseEnter={this.handleMouseEnter}
+                  handleMouseLeave={this.handleMouseLeave}
                   id={friend.id}
                   key={friend.id}
                   name={friend.name}

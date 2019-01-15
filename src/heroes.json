@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Peter Parker",
+    "name": "Peter B Parker",
     "alias": "Spider-Man",
     "image": "assets/images/spider-man.png",
     "occupation": "Photographer",
@@ -55,7 +55,7 @@
   },
   {
     "id": 7,
-    "name": "Peter Parker",
+    "name": "Amadeus Cho",
     "alias": "Iron-Spider",
     "image": "assets/images/iron-spider.png",
     "occupation": "Photographer",
@@ -82,7 +82,7 @@
   },
   {
     "id": 10,
-    "name": "Eugene 'Flash' Thompson",
+    "name": "Eugene Flash Thompson",
     "alias": "Agent Anti-Venom",
     "image": "assets/images/agent-anti-venum.png",
     "occupation": "Assistant Coach",
