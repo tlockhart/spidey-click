@@ -125,11 +125,15 @@ class App extends Component {
       //console.log("Score = "+this.state.score, "DATA = "+JSON.stringify(this.state.friends));
      }
     else
+    {
       this.setState({
-      score: newScore
-    });
-    //console.log("SCORE IS = " + this.state.score);
-    //return newScore;
+        score: newScore
+      });
+      document.getElementById('msg').innerHTML = 'Correct Guess!';
+      //console.log("SCORE IS = " + this.state.score);
+      //return newScore;
+    }
+      
   };
 
   //Calculate the best score and resets current score on loss
