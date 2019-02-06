@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-//import friends from "./friends.json";
 import friends from "./heroes.json";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import './App.css';
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   constructor() {
     super();
     this.highScoreArr = [];
@@ -21,9 +18,9 @@ class App extends Component {
     isGameLost: false
   };
 
-  // function gets called when the page loads and data is set to not clicked
+  // Function gets called when the page loads and data is set to not clicked
   componentDidMount() {
-    // reorders the dataarray on state changes
+    // Reorders the dataarray on state changes
     this.setState({ friends: this.setFriends(this.state.friends) });
   }
 
@@ -49,7 +46,6 @@ class App extends Component {
         imgClickedOnce = true;
         item.clicked = 'true';
         this.incrementScore();
-        //console.log("ITEM = ",item);
         //NOTE: ITEM MUST BE RETURNED
         return item;
       }//if 
@@ -65,7 +61,7 @@ class App extends Component {
       else {
         //NOTE: ITEM MUST BE RETURNED
         return item;
-      }//else*/
+      }//else
     });//updatedData
 
     //Shuffle images on the copy of friends data, if the user wins
@@ -79,7 +75,6 @@ class App extends Component {
     else if (!imgClickedOnce) {
       //Wobble cards
       this.setState({ isGameLost: true });
-      //console.log("UPDATEFRIENDCLICK: ALL VALUES ARE BEING RESET")
       this.setState({ friends: this.resetFriends(updatedData) });
 
       //Remove styling on Mobile Devices
@@ -90,31 +85,28 @@ class App extends Component {
 
   //Update the friends data based on wins or loses
   handleClicked = (id, elemClass) => {
-    //console.log("ID = " + id);
     let newData = this.updateFriendClick(this.state.friends, id, elemClass);
-    //console.log("NewData = "+JSON.stringify(newData));
     this.setState({ friends: newData });
-    //console.log("HandleClicked: NEW OBJECT = "+ JSON.stringify(this.state.friends));
   };//handleClicked
 
   incrementScore = () => {
     // We always use the setState method to update a component's state
     let newScore = this.state.score + 1;
 
-     //The Score is one point off
-     if(newScore === this.state.friends.length){
+    //The Score is one point off
+    if (newScore === this.state.friends.length) {
       document.getElementById('msg').innerHTML = 'You Won!';
-      
+
       //set score
       this.setState({
         score: newScore
       });
-      
+
       //Set Top Score
       this.setState({
-        topScore: this.state.score+1
+        topScore: this.state.score + 1
       });
-      
+
       //Reset score
       this.setState({
         score: 0
@@ -122,18 +114,13 @@ class App extends Component {
 
       //Reset JSON DATA TO NOT CLICKED
       this.setState({ friends: this.resetFriends(this.state.friends) });
-      //console.log("Score = "+this.state.score, "DATA = "+JSON.stringify(this.state.friends));
-     }
-    else
-    {
+    }
+    else {
       this.setState({
         score: newScore
       });
       document.getElementById('msg').innerHTML = 'Correct Guess!';
-      //console.log("SCORE IS = " + this.state.score);
-      //return newScore;
     }
-      
   };
 
   //Calculate the best score and resets current score on loss
@@ -141,14 +128,9 @@ class App extends Component {
     let newScore = 0;
     this.highScoreArr.push(this.state.score);
     this.highScoreArr.sort();
-
     let arrSize = this.highScoreArr.length;
     let bestScore = this.highScoreArr[arrSize - 1];
-    /*console.log("ResetScore: High Score Array = " + this.highScoreArr + " Length of Array = " + this.highScoreArr.length);
-    console.log("ResetScore: Best Score = " + bestScore);*/
     this.setState({ topScore: bestScore });
-
-    /*console.log("ResetScore: Top Score = " + this.state.topScore);*/
     this.setState({ score: newScore });
 
     document.getElementById('msg').innerHTML = 'You Lose!';
@@ -190,38 +172,36 @@ class App extends Component {
       <div className="App">
         <Wrapper>
           <div className="flex-container main-container">
-          <div className="row mx-0">
-          <div className="col-12 px-0">
-            <Header score={this.state.score} topScore={this.state.topScore} />
-          </div>
-          {/*<div className = "container m-0 w-100">*/}
-          <div className="col-9 mx-auto">
-            <div className="row justify-content-center align-items-center ">
-              {this.state.friends.map(friend => (
-                <FriendCard className="col-1"
-                  incrementScore={this.incrementScore}
-                  resetScore={this.resetScore}
-                  handleClicked={this.handleClicked}
-                  handleMouseEnter={this.handleMouseEnter}
-                  handleMouseLeave={this.handleMouseLeave}
-                  id={friend.id}
-                  key={friend.id}
-                  name={friend.name}
-                  image={friend.image}
-                  occupation={friend.occupation}
-                  location={friend.location}
-                  clicked={friend.clicked}
-                  isGameLost={this.state.isGameLost}
-                />)
-              )}
+            <div className="row mx-0">
+              <div className="col-12 px-0">
+                <Header score={this.state.score} topScore={this.state.topScore} />
+              </div>
+              <div className="col-9 mx-auto">
+                <div className="row justify-content-center align-items-center ">
+                  {this.state.friends.map(friend => (
+                    <FriendCard className="col-1"
+                      incrementScore={this.incrementScore}
+                      resetScore={this.resetScore}
+                      handleClicked={this.handleClicked}
+                      handleMouseEnter={this.handleMouseEnter}
+                      handleMouseLeave={this.handleMouseLeave}
+                      id={friend.id}
+                      key={friend.id}
+                      name={friend.name}
+                      image={friend.image}
+                      occupation={friend.occupation}
+                      location={friend.location}
+                      clicked={friend.clicked}
+                      isGameLost={this.state.isGameLost}
+                    />)
+                  )}
+                </div>{/*row*/}
+              </div>{/*col*/}
             </div>{/*row*/}
-          </div>{/*col*/}
-        </div>{/*row*/}
-      </div>
-        
-      <Footer/>
-      </Wrapper>
-    </div>);
+          </div>
+          <Footer />
+        </Wrapper>
+      </div>);
   }
 }
 
